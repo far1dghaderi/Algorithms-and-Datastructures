@@ -8,6 +8,12 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-function reverseInt(n) {}
+//* solution one => convert the input number to string and simply reverse it,
+//* and convert it back to number
+function reverseInt(n) {
+  let number = n.toString().split("").reverse();
+
+  return parseInt(number.join("")) * Math.sign(n);
+}
 
 module.exports = reverseInt;
