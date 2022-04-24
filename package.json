@@ -1,0 +1,20 @@
+{
+  "name": "algocasts",
+  "version": "1.0.0",
+  "description": "Solve most common interview questions and algorithms with various solutions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/far1dghaderi/AlgoCasts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/far1dghaderi/AlgoCasts/issues"
+  },
+  "homepage": "https://github.com/far1dghaderi/AlgoCasts#readme"
+}
