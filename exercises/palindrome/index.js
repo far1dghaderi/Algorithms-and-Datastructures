@@ -7,6 +7,33 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+//* solution one => use array methods for reversing the string and then simply compare them
+/*
+function palindrome(str) {
+  const reversedString = str.split("").reverse().join("");
+  return reversedString === str;
+}
+*/
+
+//* solution two => use for loop for reversing the string and then simply compare them
+/*
+function palindrome(str) {
+  let reversedString = "";
+
+  for (let char of str) {
+    reversedString = char + reversedString;
+    debugger;
+  }
+  return reversedString === str;
+}
+*/
+
+//* solution three => use reduce method for reversing the string and then simply compare them
+function palindrome(str) {
+  let reversedString = str
+    .split("")
+    .reduce((reversed, char) => char + reversed);
+  return str === reversedString;
+}
 
 module.exports = palindrome;
