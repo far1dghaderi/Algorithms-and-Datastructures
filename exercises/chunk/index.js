@@ -29,7 +29,7 @@
 //   return chunkedArray;
 // }
 
-//* solution 2 => use the slice method to create array chunks and then simply add them to the array
+//* solution 2 => use the slice method to create chunks and then simply add them to the chunkedArray
 function chunk(array, size) {
   let current = 0;
   let chunkedArray = [];
@@ -40,5 +40,5 @@ function chunk(array, size) {
   }
   return chunkedArray;
 }
-console.log(chunk([1, 2, 3, 45, 6, 7], 3));
+
 module.exports = chunk;
