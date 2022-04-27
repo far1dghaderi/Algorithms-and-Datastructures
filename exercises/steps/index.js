@@ -18,17 +18,24 @@
 //       '####'
 
 //* solution 1 => the only things that this problem needs are two for loops, the rest is simple
-function steps(n) {
-  for (let i = 1; i <= n; i++) {
-    let step = "#";
+// function steps(n) {
+//   for (let i = 1; i <= n; i++) {
+//     let step = "#";
 
-    for (let j = 2; j <= i; j++) {
-      step += "#";
-    }
-    step += " ".repeat(n - i);
-    console.log(step);
-  }
+//     for (let j = 2; j <= i; j++) {
+//       step += "#";
+//     }
+//     step += " ".repeat(n - i);
+//     console.log(step);
+//   }
+// }
+
+//* solution 2 => solve the problem with a recursive solution
+function steps(totalSteps, currentStep = 1) {
+  if (totalSteps < currentStep) return;
+  let step = "#".repeat(currentStep);
+  step += " ".repeat(totalSteps - currentStep);
+  console.log(step);
+  steps(totalSteps, (currentStep += 1));
 }
-steps(4);
-
 module.exports = steps;
