@@ -17,6 +17,18 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+//* solution 1 => the only things that this problem needs are two for loops, the rest is simple
+function steps(n) {
+  for (let i = 1; i <= n; i++) {
+    let step = "#";
+
+    for (let j = 2; j <= i; j++) {
+      step += "#";
+    }
+    step += " ".repeat(n - i);
+    console.log(step);
+  }
+}
+steps(4);
 
 module.exports = steps;

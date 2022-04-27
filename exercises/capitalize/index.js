@@ -18,5 +18,5 @@ function capitalize(str) {
 function toUpper(word) {
   return word[0].toUpperCase() + word.slice(1, word.length);
 }
-console.log(capitalize("farid is god"));
+
 module.exports = capitalize;
