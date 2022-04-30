@@ -19,8 +19,10 @@
 //   return fib(n, current);
 // }
 
+//solve the problem with simple
 function fib(n) {
   let fibArr = [0, 1];
+  if (n == 1) return 1;
   for (let i = 2; i <= n; i++) {
     fibArr.push(fibArr[fibArr.length - 2] + fibArr[fibArr.length - 1]);
   }
