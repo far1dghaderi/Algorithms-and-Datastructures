@@ -19,13 +19,33 @@
 //   return fib(n, current);
 // }
 
-//solve the problem with simple
-function fib(n) {
-  let fibArr = [0, 1];
-  if (n == 1) return 1;
-  for (let i = 2; i <= n; i++) {
-    fibArr.push(fibArr[fibArr.length - 2] + fibArr[fibArr.length - 1]);
-  }
-  return fibArr[fibArr.length - 1];
+//solve the problem with a for loop
+// function fib(n) {
+//   let fibArr = [0, 1];
+//   if (n <2 ) return n;
+//   for (let i = 2; i <= n; i++) {
+//     fibArr.push(fibArr[fibArr.length - 2] + fibArr[fibArr.length - 1]);
+//   }
+//   return fibArr[fibArr.length - 1];
+// }
+
+function memoize(fn) {
+  const cache = {};
+  return function (...args) {
+    if (cache[args]) return cache[args];
+
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  };
 }
+
+function fib(n) {
+  if (n < 2) return n;
+
+  return fib(n - 2) + fib(n - 1);
+}
+
+fib = memoize(fib);
 module.exports = fib;
