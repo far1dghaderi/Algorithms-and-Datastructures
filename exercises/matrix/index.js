@@ -57,6 +57,4 @@ function matrix(n) {
   return matrixArray;
 }
 
-console.log(matrix(8).join("\n"));
-
 module.exports = matrix;
